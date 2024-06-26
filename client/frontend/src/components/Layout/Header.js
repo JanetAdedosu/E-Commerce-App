@@ -70,7 +70,7 @@ const Header = () => {
             aria-expanded="false">
              {auth?.user?.name} 
           </NavLink>
-      <ul>
+          <ul>
           <li >
          <NavLink to="/dashboard" className="dropdown-item">
           Dashboard
@@ -85,10 +85,10 @@ const Header = () => {
            Logout
          </NavLink>
          </li>
-      </ul>
-       </li>
-          </>
-          )}
+         </ul>
+          </li>
+           </>
+           )}
           <li className="nav-item">
             <NavLink to="/cart" className="nav-link">
               Cart (0)
