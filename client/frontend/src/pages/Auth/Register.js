@@ -10,6 +10,7 @@ const Register = () => {
     const [password, setPassword] = useState("")
     const [phone, setPhone] = useState("")
     const [address,setAddress] = useState("")
+    const [answer,setAnswer] = useState("")
 
     const navigate =useNavigate();
 
@@ -21,7 +22,7 @@ const Register = () => {
         try{
             const res = await axios.post(
               '/api/v1/auth/register',
-                {name,email,password,address,phone}
+                {name,email,password,address,phone,answer}
             );
             if(res && res.data.success){
                 toast.success(res.data.message)
@@ -61,6 +62,11 @@ const Register = () => {
    <div className="mb-3">
      <input type="address" value= {address} onChange={(e) => setAddress(e.target.value)} className="form-control" id="exampleInputAddress1" 
      placeholder ="Enter Your Address" required/>
+   </div>
+
+   <div className="mb-3">
+     <input type="answer" value= {answer} onChange={(e) => setAnswer(e.target.value)} className="form-control" id="exampleInputAnswer" 
+     placeholder ="What is Your Favorite Food" required/>
    </div>
 
     {/* <div className="mb-3 form-check">
