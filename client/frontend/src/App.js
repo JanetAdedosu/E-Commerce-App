@@ -9,6 +9,7 @@ import Login from "./pages/Auth/Login";
 // eslint-disable-next-line
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from "./pages/user/Dashboard";
   
 
 
@@ -17,6 +18,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />  
         <Route path="/about" element={<About />} />
